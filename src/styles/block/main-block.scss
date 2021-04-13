@@ -44,9 +44,18 @@
   }
 
   &__technology {
+    margin-bottom: 77px;
+    @media (min-width: $breakPointTablet) {
+      margin-bottom: 130px;
+    }
     @media (min-width: $breakPointPc) {
       @include container;
     }
+  }
+
+  &__director {
+    margin-bottom: 45px;
+    @include container;
   }
 
 }

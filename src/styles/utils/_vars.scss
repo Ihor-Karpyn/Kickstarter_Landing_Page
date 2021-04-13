@@ -1,5 +1,6 @@
 //region Adaptation
 $mainGap: 30px;
+$mainGapTablet: 80px;
 $mainGapPc: 123px;
 $containerMaxWidth: 1500px;
 //endregion
@@ -20,6 +21,11 @@ $breakPointPc: 1200px;
 //<editor-fold desc="Bullets">
 $bulletsCardWidth: 260px;
 $bulletsCardGap: 24px;
+//</editor-fold>
+
+//<editor-fold desc="features block">
+$futureCardWidth: 260px;
+$futureCardGap: 74px;
 //</editor-fold>
 
 //<editor-fold desc="Plus position">

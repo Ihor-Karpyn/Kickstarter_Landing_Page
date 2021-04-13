@@ -34,10 +34,10 @@
     @media (min-width: $breakPointTablet) {
       display: flex;
       flex-direction: row-reverse;
-      justify-content: space-around;
-      width: calc(100% - #{$mainGap});
+      justify-content: space-between;
+      width: calc(100% - #{$mainGapTablet});
       margin-top: 130px;
-      margin-left: $mainGap;
+      margin-left: $mainGapTablet;
     }
 
     @media (min-width: $breakPointPc) {

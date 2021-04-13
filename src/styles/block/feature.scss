@@ -1,0 +1,261 @@
+.feature {
+  position: relative;
+  padding-top: 1px;
+
+  &__title {
+    @include container;
+    margin-top: 44px;
+    margin-bottom: 50px;
+
+    text-align: left;
+    font-size: 37px;
+    line-height: 60px;
+    text-transform: uppercase;
+
+    @media (min-width: $breakPointTablet) {
+
+      font-size: 56px;
+      line-height: 70px;
+    }
+
+  }
+
+  &__img-wrapper {
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: $breakPointTablet) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -10%);
+
+      @include container;
+      justify-content: flex-end;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 450px;
+
+    @media (min-width: $breakPointTablet) {
+      max-width: none;
+      width: 510px;
+    }
+
+    @media (min-width: $breakPointPc) {
+      max-width: none;
+      width: 700px;
+    }
+  }
+
+  &__cards-wrapper {
+    width: $futureCardWidth;
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    @media (min-width: $breakPointTablet) {
+      width: auto;
+      overflow: visible;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, $futureCardWidth);
+    gap: 74px $futureCardGap;
+
+    transition: transform 0.5s;
+
+    @media (min-width: $breakPointTablet) {
+      position: relative;
+      z-index: 1;
+
+      @include container;
+      grid-template-columns: 1fr;
+      gap: 60px;
+
+      justify-content: center;
+
+    }
+
+    //@media (min-width: $breakPointPc) {
+    //  grid-template-columns: repeat(4, minmax(200px, $futureCardWidth));
+    //  justify-content: space-between;
+    //}
+
+  }
+
+  &__card {
+    @media (min-width: $breakPointTablet) {
+
+      &:nth-child(1) {
+        justify-self: center;
+        margin-left: 200px;
+      }
+
+      &:nth-child(2) {
+        justify-self: start;
+      }
+
+      &:nth-child(3) {
+        justify-self: center;
+        margin-left: -200px;
+      }
+
+    }
+  }
+
+  &__card-title {
+    width: 100%;
+    margin-bottom: 20px;
+
+    text-align: left;
+    font-size: 30px;
+    line-height: 37px;
+    text-transform: uppercase;
+
+    color: $colorBlue;
+
+    @media (min-width: $breakPointTablet) {
+      font-size: 34px;
+      line-height: 41px;
+    }
+
+  }
+
+  &__list {
+    list-style: disc;
+  }
+
+  &__item {
+    margin-left: 20px;
+    margin-bottom: 10px;
+
+    color: $colorSilverForTittle;
+
+    font-size: 14px;
+    line-height: 21px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $breakPointTablet) {
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+  }
+
+  &__radio {
+    display: none;
+
+    //<editor-fold desc="Cards Move">
+    @for $i from 1 through 3 {
+      &--#{$i}:checked ~ .feature__cards {
+        transform: translateX(
+          -($futureCardWidth + $futureCardGap) * ($i - 1)
+        );
+      }
+    }
+
+    @media (min-width: $breakPointTablet) {
+      @for $i from 1 through 3 {
+        &--#{$i}:checked ~ .feature__cards {
+          transform: translateX(0);
+          transition: transform 0s;
+        }
+      }
+    }
+    //</editor-fold>
+
+    //<editor-fold desc="Btn Click">
+    @for $i from 1 through 3 {
+      &--#{$i}:checked ~ .feature__btn-wrapper > .feature__btn--#{$i} {
+        display: block;
+      }
+      &--#{$i}:checked ~ .feature__btn-wrapper > .feature__btn--#{$i + 3} {
+        display: block;
+      }
+    }
+    //</editor-fold>
+
+    @for $i from 1 through 3 {
+      &--#{$i}:checked ~ .feature__counter:before {
+        content: "0#{$i} ";
+      }
+    }
+
+  }
+
+  &__btn-wrapper {
+    margin-top: 52px;
+    @include btnForToggleWrapper;
+  }
+
+  &__btn {
+    @include btnForToggle;
+
+    @media (min-width: $breakPointTablet) {
+      display: none;
+    }
+
+    //<editor-fold desc="Button's background and cursor">
+    &--1 {
+      @include backgroundImage("../images/bulletBtnLeftDis.svg");
+      cursor: default;
+    }
+
+    &--6 {
+      @include backgroundImage("../images/bulletBtnRightDis.svg");
+      cursor: default;
+    }
+
+    @for $i from 2 through 3 {
+      &--#{$i} {
+        @include backgroundImage("../images/bulletBtnLeftA.svg");
+      }
+    }
+    @for $i from 4 through 5 {
+      &--#{$i} {
+        @include backgroundImage("../images/bulletBtnRightA.svg");
+      }
+    }
+    //</editor-fold>
+
+  }
+
+  &__counter {
+    @include counterForToggle(3);
+  }
+
+  &__background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    height: 100%;
+
+    background-color: #f2f2f2;
+
+    @media (min-width: $breakPointTablet) {
+      width: 80%;
+      height: 60%;
+
+      left: auto;
+      right: 0;
+      top: 50%;
+      transform: translateY(-35%);
+    }
+    @media (min-width: $breakPointPc) {
+      height: 70%;
+
+      transform: translateY(-20%);
+    }
+  }
+
+}
