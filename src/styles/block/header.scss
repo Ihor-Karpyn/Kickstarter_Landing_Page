@@ -1,0 +1,161 @@
+.header {
+
+  &__icon-wrapper {
+    @include container;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 28px;
+  }
+
+  &__logo {
+    width: 161px;
+    height: 26px;
+  }
+
+  &__menu-toggle {
+    position: relative;
+    z-index: 1;
+
+    display: block;
+    width: 24px;
+    height: 14px;
+
+    @include backgroundImage("../images/toggle_on.svg");
+
+    @media (min-width: $breakPointPc) {
+      display: none;
+    }
+  }
+
+  &__content {
+
+    @media (min-width: $breakPointTablet) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-around;
+      width: calc(100% - #{$mainGap});
+      margin-top: 130px;
+      margin-left: $mainGap;
+    }
+
+    @media (min-width: $breakPointPc) {
+      justify-content: space-between;
+      width: calc(100% - #{$mainGapPc});
+      max-width: $containerMaxWidth;
+      margin-left: $mainGapPc;
+    }
+
+    @media (min-width: $containerMaxWidth + $mainGapPc * 2) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  }
+
+  &__img-wrapper {
+    overflow: hidden;
+    max-width: 650px;
+
+    @media (min-width: $breakPointPc) {
+      max-width: none;
+    }
+  }
+
+  &__img {
+    width: 160%;
+
+    @media (min-width: $breakPointBigTel) {
+      width: 739px;
+      margin-top: -60px;
+    }
+
+    @media (min-width: $breakPointPc) {
+      width: 1000px;
+    }
+
+  }
+
+  &__text-wrapper {
+    margin: 0 auto;
+
+    @media (min-width: $breakPointBigTel) {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    @media (min-width: $breakPointTablet) {
+      display: block;
+      margin: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 23px;
+
+    font-size: 44px;
+    line-height: 130%;
+    color: $colorSilverForTittle;
+
+    @media (min-width: $breakPointTablet) {
+      font-size: 48px;
+      line-height: 62px;
+      text-align: left;
+    }
+
+    @media (min-width: $breakPointPc) {
+      font-size: 64px;
+      line-height: 83px;
+    }
+
+  }
+
+  &__description {
+    width: 260px;
+    margin: 0 auto;
+
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: $colorSilverForTittle;
+
+    @media (min-width: $breakPointBigTel) {
+      display: flex;
+      align-items: center;
+      width: 250px;
+      margin: 0;
+    }
+
+    @media (min-width: $breakPointTablet) {
+      font-size: 16px;
+      line-height: 24px;
+      text-align: left;
+    }
+  }
+
+  &__nav-burger {
+    position: absolute;
+  }
+
+  &__btn-buy {
+    display: none;
+
+    @media (min-width: $breakPointPc) {
+      display: block;
+      width: 102px;
+      height: 48px;
+
+      color: white;
+      background-color: #333;
+
+      text-transform: uppercase;
+
+      &:hover {
+        box-shadow: 5px 5px 5px silver;
+      }
+
+    }
+  }
+
+}

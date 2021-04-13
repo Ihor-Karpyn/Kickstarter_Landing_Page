@@ -1,1 +1,40 @@
-$c-gray: #eee;
+//region Adaptation
+$mainGap: 30px;
+$mainGapPc: 123px;
+$containerMaxWidth: 1500px;
+//endregion
+
+//<editor-fold desc="Color">
+$colorSilverForTittle: #333;
+$colorSilverForText: #7c7c7c;
+$colorBackground: #f7f7f7;
+$colorBlue: #0db2b3;
+//</editor-fold>
+
+//<editor-fold desc="Adaptive break point">
+$breakPointBigTel: 550px;
+$breakPointTablet: 768px;
+$breakPointPc: 1200px;
+//</editor-fold>
+
+//<editor-fold desc="Bullets">
+$bulletsCardWidth: 260px;
+$bulletsCardGap: 24px;
+//</editor-fold>
+
+//<editor-fold desc="Plus position">
+$plusPosition: 1 33% 7%,
+  2 50% 22%,
+  3 37% 28%,
+  4 20% 32%,
+  5 56% 40%,
+  6 24% 50%,
+  7 43% 60%,
+  8 26% 72%,
+  9 10% 82%,
+  10 33% 84%,
+  11 23% 91%;
+
+$plusCorrectionPositionsX: -87%;
+$plusCorrectionPositionsY: 55px;
+//</editor-fold>

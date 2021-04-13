@@ -1,0 +1,52 @@
+.main-block {
+
+  &__bullet {
+    margin-top: 100px;
+    margin-bottom: 90px;
+    @include container;
+
+    @media (min-width: $breakPointTablet) {
+      margin-top: 137px;
+      margin-bottom: 130px;
+    }
+
+    @media (min-width: $breakPointPc) {
+      margin-top: 0;
+      margin-bottom: 150px;
+    }
+  }
+
+  &__video {
+    margin-bottom: 89px;
+
+    @media (min-width: $breakPointTablet) {
+      margin-bottom: 130px;
+    }
+    @media (min-width: $breakPointPc) {
+      margin-bottom: 150px;
+    }
+  }
+
+  &__future {
+    margin-left: $mainGap;
+    margin-right: $mainGap;
+    margin-bottom: 90px;
+
+    @media (min-width: $breakPointTablet) {
+      margin-left: 0;
+      margin-bottom: 130px;
+    }
+
+    @media (min-width: $breakPointPc) {
+      margin-bottom: 150px;
+    }
+
+  }
+
+  &__technology {
+    @media (min-width: $breakPointPc) {
+      @include container;
+    }
+  }
+
+}

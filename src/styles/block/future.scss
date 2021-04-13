@@ -1,0 +1,83 @@
+.future {
+  display: grid;
+
+  @media (min-width: $breakPointTablet) {
+    grid-template-columns: repeat(2, 48%);
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: "img title" "img text";
+    justify-content: center;
+    gap: 30px 20px;
+    overflow: hidden;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    color: $colorSilverForTittle;
+
+    font-size: 37px;
+    line-height: 55px;
+    text-align: left;
+
+    @media (min-width: $breakPointTablet) {
+      position: relative;
+      z-index: 1;
+
+      grid-area: title;
+      align-self: center;
+      margin-bottom: 0;
+      margin-left: -91px;
+
+      font-size: 56px;
+      line-height: 72px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    margin-bottom: 30px;
+
+    @media (min-width: $breakPointTablet) {
+      grid-area: img;
+      justify-self: right;
+      //transform: translate(-200px);
+      width: 623px;
+    }
+  }
+
+  &__text {
+    color: $colorSilverForTittle;
+
+    font-size: 14px;
+    line-height: 21px;
+
+    @media (min-width: $breakPointTablet) {
+      grid-area: text;
+      max-width: 390px;
+
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+  }
+
+  &__link {
+    color: $colorBlue;
+
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+
+    &:after {
+      content: "";
+
+      display: block;
+      width: 53px;
+      height: 1px;
+      margin-top: 6px;
+
+      background-color: $colorBlue;
+    }
+  }
+
+}

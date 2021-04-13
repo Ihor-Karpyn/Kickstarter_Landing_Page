@@ -1,0 +1,50 @@
+.nav-burger {
+  transform: translateY(-100%);
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: $colorSilverForTittle;
+  opacity: 0;
+
+  transition: transform 0.5s, opacity 0.5s;
+
+  &__title {
+    margin-top: 28px;
+    margin-bottom: 28px;
+    padding-left: $mainGap;
+
+    color: white;
+
+    text-align: left;
+    font-size: 17px;
+    line-height: 26px;
+    letter-spacing: 2px;
+  }
+
+  &__item {
+    margin: 0 10px 10px;
+
+    text-align: center;
+
+    &:after {
+      content: "";
+
+      display: block;
+      height: 1px;
+      background-color: rgb(200,200,200);
+      margin-top: 4px;
+    }
+  }
+
+  &__link {
+    color: #f7f7f7;
+
+    font-family: Helvetica Neue, sans-serif;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+}

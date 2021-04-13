@@ -1,0 +1,220 @@
+.technology {
+
+  &__title {
+    margin-bottom: 50px;
+
+    text-align: left;
+    font-size: 37px;
+    line-height: 46px;
+    text-transform: uppercase;
+
+    @include container;
+
+    @media (min-width: $breakPointTablet) {
+      font-size: 56px;
+      line-height: 70px;
+    }
+
+  }
+
+  &__img-wrapper {
+    overflow: hidden;
+
+    @media (min-width: $breakPointTablet) {
+      overflow: visible;
+    }
+  }
+
+  &__img-move {
+    position: relative;
+
+    width: 200%;
+
+    transition: transform 1s;
+    @media (min-width: $breakPointTablet) {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+  }
+
+  &__radio {
+    display: none;
+
+    //<editor-fold desc="Cards Move">
+    @for $i from 1 through 2 {
+      &--#{$i}:checked ~ .technology__img-wrapper > .technology__img-move {
+        transform: translateX(-50% * ($i - 1));
+      }
+    }
+
+    @media (min-width: $breakPointTablet) {
+      @for $i from 1 through 2 {
+        &--#{$i}:checked ~ .technology__img-wrapper > .technology__img-move {
+          transform: translateX(0);
+          transition: transform 0s;
+        }
+      }
+    }
+    //</editor-fold>
+
+    //<editor-fold desc="Btn Click">
+    @for $i from 1 through 2 {
+      &--#{$i}:checked ~ .technology__btn-wrapper > .technology__btn--#{$i} {
+        display: block;
+      }
+      &--#{$i}:checked ~
+      .technology__btn-wrapper >
+      .technology__btn--#{$i + 2} {
+        display: block;
+      }
+    }
+    //</editor-fold>
+
+    @for $i from 1 through 2 {
+      &--#{$i}:checked ~ .technology__counter:before {
+        content: "0#{$i} ";
+      }
+    }
+
+  }
+
+  &__btn-wrapper {
+    @include btnForToggleWrapper;
+  }
+
+  &__btn {
+    @include btnForToggle;
+
+    //<editor-fold desc="Button's background and cursor">
+    &--1 {
+      @include backgroundImage("../images/bulletBtnLeftDis.svg");
+      cursor: default;
+    }
+
+    &--2 {
+      @include backgroundImage("../images/bulletBtnLeftA.svg");
+    }
+
+    &--3 {
+      @include backgroundImage("../images/bulletBtnRightA.svg");
+    }
+
+    &--4 {
+      @include backgroundImage("../images/bulletBtnRightDis.svg");
+      cursor: default;
+    }
+    //</editor-fold>
+
+  }
+
+  &__counter {
+    @include counterForToggle(2);
+  }
+
+  &__circle {
+    position: absolute;
+
+    @include circle(48px);
+
+    background-color: $colorBlue;
+    color: white;
+
+    text-align: center;
+    font-size: 25px;
+    line-height: 45px;
+
+    cursor: help;
+
+    @each $i, $top, $left in $plusPosition {
+      &--#{$i} {
+        top: $top;
+        left: $left;
+      }
+    }
+  }
+
+  &__circle-hover {
+    display: none;
+    position: absolute;
+    transform: translate($plusCorrectionPositionsX, $plusCorrectionPositionsY);
+
+    width: 155px;
+    //height: 35%;
+
+    border-right: 1px solid $colorSilverForTittle;
+    border-bottom: 1px solid $colorSilverForTittle;
+
+    @each $i, $top, $left in $plusPosition {
+      &--#{$i} {
+        top: $top;
+        left: $left;
+        height: 100% - $top - 27%;
+      }
+    }
+
+    @media (min-width: $breakPointTablet) {
+      width: 200px;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateY(50%);
+
+      width: 63px;
+      height: 5px;
+
+      background-color: $colorSilverForTittle;
+    }
+
+    &:before {
+      content: "Light giding component for running light";
+
+      position: absolute;
+      left: 0;
+      bottom: 10px;
+
+      width: 150px;
+
+      color: $colorSilverForTittle;
+
+      text-align: left;
+      font-size: 14px;
+      line-height: 20px;
+
+      @media (min-width: $breakPointTablet) {
+        width: 190px;
+        font-size: 16px;
+      }
+
+    }
+
+    //<editor-fold desc="Normalize hover efect">
+    &--1 {
+      @include rotatePlusHover;
+    }
+
+    &--6 {
+      @include rotatePlusHover;
+    }
+
+    &--7 {
+      @include rotatePlusHover;
+    }
+
+    //</editor-fold>
+
+  }
+
+  &__circle:hover + .technology__circle-hover {
+    display: block;
+  }
+
+}

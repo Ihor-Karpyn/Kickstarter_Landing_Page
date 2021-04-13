@@ -1,6 +1,90 @@
-@mixin hover($_property, $_toValue) {
-  transition: #{$_property} 0.3s;
-  &:hover {
-    #{$_property}: $_toValue;
+@mixin container {
+  max-width: $containerMaxWidth;
+  width: calc(100% - 2 * #{$mainGap});
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $breakPointPc) {
+    width: calc(100% - 2 * #{$mainGapPc});
+  }
+}
+
+@mixin backgroundImage($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+@mixin circle($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+}
+
+@mixin triangle($size, $color) {
+  border-top: $size/2 solid transparent;
+  border-bottom: $size/2 solid transparent;
+  border-left: $size solid $color;
+}
+
+@mixin btnForToggle {
+  display: none;
+  width: 48px;
+  height: 13px;
+
+  cursor: pointer;
+}
+
+@mixin btnForToggleWrapper {
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: $breakPointTablet) {
+    display: none;
+  }
+}
+
+@mixin counterForToggle ($count) {
+  margin-top: 8px;
+
+  color: #bdbdbd;
+
+  text-align: center;
+  font-family: DIN Pro, sans-serif;
+  font-size: 11px;
+  line-height: 14px;
+
+  @media (min-width: $breakPointTablet) {
+    display: none;
+  }
+
+  &:before {
+    color: #333;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &:after {
+    content: " 0#{$count}";
+  }
+
+}
+
+@mixin rotatePlusHover {
+  transform: translate(
+    $plusCorrectionPositionsX + 100%, $plusCorrectionPositionsY
+  );
+  border-right-color: transparent;
+  border-left: 1px solid $colorSilverForTittle;
+
+  &:after {
+    left: auto;
+    right: 0;
+  }
+
+  &:before {
+    text-align: right;
   }
 }

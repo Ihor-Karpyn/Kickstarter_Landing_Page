@@ -1,0 +1,158 @@
+.bullet {
+
+  &__cards-wrapper {
+    width: $bulletsCardWidth;
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    @media (min-width: $breakPointTablet) {
+      width: auto;
+      overflow: visible;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, $bulletsCardWidth);
+    gap: 74px $bulletsCardGap;
+
+    transition: transform 0.5s;
+
+    @media (min-width: $breakPointTablet) {
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      justify-items: center;
+    }
+
+    @media (min-width: $breakPointPc) {
+      grid-template-columns: repeat(4, minmax(200px, $bulletsCardWidth));
+      justify-content: space-between;
+    }
+
+  }
+
+  &__card {
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__card-img {
+    margin-bottom: 40px;
+    width: 58px;
+    height: 46px;
+
+    //<editor-fold desc="Background image for bullet">
+    @for $i from 1 through 4 {
+      &--background--#{$i} {
+        @include backgroundImage("../images/bullet_#{$i}.svg");
+      }
+    }
+    //</editor-fold>
+
+  }
+
+  &__card-title {
+    margin-bottom: 50px;
+
+    color: $colorSilverForTittle;
+
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+
+  }
+
+  &__card-text {
+    color: $colorSilverForText;
+
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+  }
+
+  &__radio {
+    display: none;
+
+    //<editor-fold desc="Cards Move">
+    @for $i from 1 through 4 {
+      &--#{$i}:checked ~ .bullet__cards {
+        transform: translateX(
+          -($bulletsCardWidth + $bulletsCardGap) * ($i - 1)
+        );
+      }
+    }
+
+    @media (min-width: $breakPointTablet) {
+      @for $i from 1 through 4 {
+        &--#{$i}:checked ~ .bullet__cards {
+          transform: translateX(0);
+          transition: transform 0s;
+        }
+      }
+    }
+    //</editor-fold>
+
+    //<editor-fold desc="Btn Click">
+    @for $i from 1 through 4 {
+      &--#{$i}:checked ~ .bullet__btn-wrapper > .bullet__btn--#{$i} {
+        display: block;
+      }
+      &--#{$i}:checked ~ .bullet__btn-wrapper > .bullet__btn--#{$i + 4} {
+        display: block;
+      }
+    }
+    //</editor-fold>
+
+    @for $i from 1 through 4 {
+      &--#{$i}:checked ~ .bullet__counter:before {
+        content: "0#{$i} ";
+      }
+    }
+
+  }
+
+  &__btn-wrapper {
+    margin-top: 52px;
+    @include btnForToggleWrapper;
+  }
+
+  &__btn {
+    @include btnForToggle;
+
+    @media (min-width: $breakPointTablet) {
+      display: none;
+    }
+
+    //<editor-fold desc="Button's background and cursor">
+    &--1 {
+      @include backgroundImage("../images/bulletBtnLeftDis.svg");
+      cursor: default;
+    }
+
+    &--8 {
+      @include backgroundImage("../images/bulletBtnRightDis.svg");
+      cursor: default;
+    }
+
+    @for $i from 2 through 4 {
+      &--#{$i} {
+        @include backgroundImage("../images/bulletBtnLeftA.svg");
+      }
+    }
+    @for $i from 5 through 7 {
+      &--#{$i} {
+        @include backgroundImage("../images/bulletBtnRightA.svg");
+      }
+    }
+    //</editor-fold>
+
+  }
+
+  &__counter {
+    @include counterForToggle(4);
+  }
+}

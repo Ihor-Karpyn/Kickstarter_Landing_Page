@@ -6,8 +6,340 @@
     <title>Title</title>
     <link rel="stylesheet" href="./styles/main.scss">
   </head>
-  <body>
-    <h1>Hello Mate Academy</h1>
+  <body class="page">
+
+    <!--<editor-fold desc="Heder">-->
+    <header class="header">
+
+      <!--<editor-fold desc="Burger nav">-->
+      <input
+        type="checkbox"
+        id="burger-toggle"
+        class="burger-toggle">
+      <nav class="nav-burger header__nav-burger">
+        <h2 class="nav-burger__title">Crazybaby</h2>
+        <ul class="nav-burger__list">
+          <li class="nav-burger__item">
+            <a href="#" class="nav-burger__link">our story</a>
+          </li>
+          <li class="nav-burger__item">
+            <a href="#" class="nav-burger__link">about as</a>
+          </li>
+          <li class="nav-burger__item">
+            <a href="#" class="nav-burger__link">technology</a>
+          </li>
+          <li class="nav-burger__item">
+            <a href="#" class="nav-burger__link">features</a>
+          </li>
+          <li class="nav-burger__item">
+            <a href="#" class="nav-burger__link">get in touch</a>
+          </li>
+        </ul>
+      </nav>
+      <!--</editor-fold>-->
+
+      <div class="header__icon-wrapper">
+        <img
+          class="header__logo"
+          src="images/logo.svg"
+          alt="crazybaby's logo">
+        <label class="header__menu-toggle" for="burger-toggle"></label>
+        <button class="header__btn-buy">Buy</button>
+      </div>
+
+
+      <div class="header__content">
+        <div class="header__img-wrapper">
+          <img
+            class="header__img"
+            src="images/product.png"
+            alt="product photo">
+        </div>
+        <div class="header__text-wrapper">
+          <h1 class="header__title">
+            Futuristic
+            <br>
+            Wireless
+            <br>
+            Speaker
+          </h1>
+          <p class="header__description">
+            Luna’s performance is balanced and smooth in all frequency ranges
+            which makes the music both naturally pleasant and distinctly more
+            layered.
+          </p>
+        </div>
+      </div>
+    </header>
+    <!--</editor-fold>-->
+
+    <!--<editor-fold desc="Pc nav">-->
+    <nav class="nav-pc page__nav">
+      <ul class="nav-pc__list">
+        <li class="nav-pc__item">
+          <a href="#" class="nav-pc__link">our story</a>
+        </li>
+        <li class="nav-pc__item">
+          <a href="#" class="nav-pc__link">about us</a>
+        </li>
+        <li class="nav-pc__item">
+          <a href="#" class="nav-pc__link">technology</a>
+        </li>
+        <li class="nav-pc__item">
+          <a href="#" class="nav-pc__link">features</a>
+        </li>
+        <li class="nav-pc__item">
+          <a href="#" class="nav-pc__link">get in touch</a>
+        </li>
+      </ul>
+    </nav>
+    <!--</editor-fold>-->
+
+    <main class="main-block">
+      <!--<editor-fold desc="Bullets">-->
+      <section class="bullet main-block__bullet">
+        <div class="bullet__cards-wrapper">
+          <input
+            class="bullet__radio bullet__radio--1"
+            name="bullet-toggle"
+            type="radio"
+            id="b1"
+            checked>
+          <input
+            class="bullet__radio bullet__radio--2"
+            name="bullet-toggle"
+            type="radio"
+            id="b2">
+          <input
+            class="bullet__radio bullet__radio--3"
+            name="bullet-toggle"
+            type="radio"
+            id="b3">
+          <input
+            class="bullet__radio bullet__radio--4"
+            name="bullet-toggle"
+            type="radio"
+            id="b4">
+          <div class="bullet__cards">
+            <!--<editor-fold desc="Cards">-->
+            <div class="bullet__card">
+              <div
+                class="bullet__card-img bullet__card-img--background--1"
+              >
+              </div>
+              <h2 class="bullet__card-title">Futuristic Design</h2>
+              <p class="bullet__card-text">
+                To give Luna a truly flawless look, we specifically picked
+                aircraft grade aluminum as its material and adopted both
+                three-dimensional stretch-bending technology and a high
+                precision
+                cold forging technique.
+              </p>
+            </div>
+            <div class="bullet__card">
+              <div
+                class="bullet__card-img bullet__card-img--background--2"
+              >
+              </div>
+              <h2 class="bullet__card-title">Tweeter Speaker System</h2>
+              <p class="bullet__card-text">
+                To deliver a more layered sound performance better than a sole
+                full-range speaker, our team equipped Luna with one more tweeter
+                speaker responsible for high-frequency sound independently.
+              </p>
+            </div>
+            <div class="bullet__card">
+              <div
+                class="bullet__card-img bullet__card-img--background--3"
+              >
+              </div>
+              <h2 class="bullet__card-title">Multiroom System</h2>
+              <p class="bullet__card-text">
+                Luna is natively compatible with your home Wi-Fi. Set up
+                multiple speakers in different rooms to expand your music
+                experience into the entire house.
+              </p>
+            </div>
+            <div class="bullet__card">
+              <div
+                class="bullet__card-img bullet__card-img--background--4"
+              >
+              </div>
+              <h2 class="bullet__card-title">Intuitive Lighting System</h2>
+              <p class="bullet__card-text">
+                An intuitive user interface allows you to adjust the hue and
+                saturation of color for lighting that fits any mood and
+                situation.
+              </p>
+            </div>
+            <!--</editor-fold>-->
+          </div>
+          <div class="bullet__btn-wrapper">
+            <label class="bullet__btn bullet__btn--1" for="b1"></label>
+            <label class="bullet__btn bullet__btn--2" for="b1"></label>
+            <label class="bullet__btn bullet__btn--3" for="b2"></label>
+            <label class="bullet__btn bullet__btn--4" for="b3"></label>
+            <label class="bullet__btn bullet__btn--5" for="b2"></label>
+            <label class="bullet__btn bullet__btn--6" for="b3"></label>
+            <label class="bullet__btn bullet__btn--7" for="b4"></label>
+            <label class="bullet__btn bullet__btn--8" for="b4"></label>
+          </div>
+          <div class="bullet__counter">/</div>
+        </div>
+      </section>
+      <!--</editor-fold>-->
+
+      <!--<editor-fold desc="Video">-->
+      <section class="video main-block__video">
+        <img
+          class="video__img"
+          src="images/video_intro.png"
+          alt="video's intro">
+        <div class="video__filter"></div>
+        <div class="video__play"></div>
+      </section>
+      <!--</editor-fold>-->
+
+      <!--<editor-fold desc="Future">-->
+      <section class="future main-block__future">
+        <h2 class="future__title">
+          DESIGNED FOR
+          <br>
+          THE FUTURE
+        </h2>
+        <img
+          class="future__img"
+          src="images/future.png"
+          alt="design">
+        <p class="future__text">
+          In 2014, a group of geeky industrial designers, engineering veterans
+          and acoustic experts formed crazybaby. This is a bunch of passionate
+          people who are crazy enough to think they can challenge the industry
+          with disruptive audio products.
+          <br>
+          <br>
+          <a class="future__link" href="#">See more about us</a>
+        </p>
+      </section>
+      <!--</editor-fold>-->
+
+      <!--<editor-fold desc="Technology">-->
+      <section class="technology main-block__technology">
+        <h2 class="technology__title">technology</h2>
+        <input
+          class="technology__radio technology__radio--1"
+          id="tech1"
+          name="tech"
+          type="radio"
+          checked>
+        <input
+          class="technology__radio technology__radio--2"
+          id="tech2"
+          name="tech"
+          type="radio">
+        <div class="technology__img-wrapper">
+          <div class="technology__img-move">
+            <!--<editor-fold desc="Circle plus">-->
+            <div class="technology__circle technology__circle--1">
+              +
+            </div>
+            <div
+              class="technology__circle-hover technology__circle-hover--1">
+            </div>
+            <div class="technology__circle technology__circle--2">
+              +
+            </div>
+            <div
+              class="technology__circle-hover technology__circle-hover--2">
+            </div>
+            <div class="technology__circle technology__circle--3">
+              +
+            </div>
+            <div
+              class="technology__circle-hover technology__circle-hover--3">
+            </div>
+            <div class="technology__circle technology__circle--4">
+              +
+            </div>
+            <div
+              class="technology__circle-hover technology__circle-hover--4">
+            </div>
+            <div class="technology__circle technology__circle--5">
+              +
+            </div>
+            <div
+              class="technology__circle-hover technology__circle-hover--5">
+            </div>
+            <div class="technology__circle technology__circle--6">
+              +
+            </div>
+            <div
+              class="technology__circle-hover technology__circle-hover--6">
+            </div>
+            <div class="technology__circle technology__circle--7">
+              +
+            </div>
+            <div
+              class="technology__circle-hover technology__circle-hover--7">
+            </div>
+            <div class="technology__circle technology__circle--8">
+              +
+            </div>
+            <div
+              class="technology__circle-hover technology__circle-hover--8">
+            </div>
+            <div class="technology__circle technology__circle--9">
+              +
+            </div>
+            <div
+              class="technology__circle-hover technology__circle-hover--9">
+            </div>
+            <div class="technology__circle technology__circle--10">
+              +
+            </div>
+            <div
+              class="technology__circle-hover technology__circle-hover--10">
+            </div>
+            <div class="technology__circle technology__circle--11">
+              +
+            </div>
+            <div
+              class="technology__circle-hover technology__circle-hover--11">
+            </div>
+            <!--</editor-fold>-->
+            <img
+              class="technology__img"
+              src="images/product2.svg"
+              alt="disassembled product">
+          </div>
+        </div>
+        <div class="technology__btn-wrapper">
+          <label
+            class="technology__btn technology__btn--1"
+            for="tech1">
+          </label>
+          <label
+            class="technology__btn technology__btn--2"
+            for="tech1">
+          </label>
+          <label
+            class="technology__btn technology__btn--3"
+            for="tech2">
+          </label>
+          <label
+            class="technology__btn technology__btn--4"
+            for="tech2">
+          </label>
+        </div>
+        <div class="technology__counter">/</div>
+        </div>
+      </section>
+      <!--</editor-fold>-->
+
+
+    </main>
+
+
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>

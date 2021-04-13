@@ -1,0 +1,19 @@
+.burger-toggle {
+  display: none;
+
+  &:checked ~ .nav-burger {
+    transform: translateY(0);
+    opacity: 1;
+
+    @media (min-width: $breakPointPc) {
+      display: none;
+    }
+  }
+
+  &:checked ~ .header__icon-wrapper > .header__menu-toggle {
+    @include backgroundImage("../images/toggle_off.svg");
+    transition-property: background;
+    transition-delay: 0.3s;
+  }
+
+}
