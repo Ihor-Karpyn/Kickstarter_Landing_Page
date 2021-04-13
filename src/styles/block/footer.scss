@@ -1,0 +1,78 @@
+.footer {
+  position: relative;
+  padding-top: 1px;
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 161px;
+    height: 26px;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 0;
+    left: 85%;
+    display: block;
+    width: 24px;
+    height: 20px;
+
+    @include backgroundImage("../images/arrow.svg");
+  }
+
+  &__icon-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    gap: 44px;
+    margin-top: 91px;
+    margin-bottom: 23px;
+
+    @media (min-width: $breakPointTablet) {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__fb {
+    display: block;
+    width: 11px;
+    height: 19px;
+
+    @include backgroundImage("../images/fb.svg");
+  }
+
+  &__twitter {
+    display: block;
+    width: 22px;
+    height: 17px;
+
+    @include backgroundImage("../images/twitter.svg");
+  }
+
+  &__inst {
+    display: block;
+    width: 18px;
+    height: 18px;
+
+    @include backgroundImage("../images/inst.svg");
+  }
+
+  &__privacy-policy {
+    display: block;
+    margin-bottom: 50px;
+
+    color: #bdbdbd;
+
+    text-align: center;
+    font-size: 14px;
+    line-height: 21px;
+
+    @media (min-width: $breakPointPc) {
+      margin-bottom: 100px;
+    }
+  }
+
+}

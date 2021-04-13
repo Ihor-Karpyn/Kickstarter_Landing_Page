@@ -58,4 +58,20 @@
     @include container;
   }
 
+  &__feature {
+    margin-bottom: 45px;
+
+    @media (min-width: $breakPointTablet) {
+      margin-bottom: 130px;
+    }
+    @media (min-width: $breakPointPc) {
+      margin-bottom: 180px;
+    }
+  }
+
+  &__feedback {
+    @include container;
+    margin-bottom: 140px;
+  }
+
 }

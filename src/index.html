@@ -9,7 +9,7 @@
   <body class="page">
 
     <!--<editor-fold desc="Heder">-->
-    <header class="header">
+    <header class="header" id="top">
 
       <!--<editor-fold desc="Burger nav">-->
       <input
@@ -20,29 +20,32 @@
         <h2 class="nav-burger__title">Crazybaby</h2>
         <ul class="nav-burger__list">
           <li class="nav-burger__item">
-            <a href="#" class="nav-burger__link">our story</a>
+            <a href="#story" class="nav-burger__link">our story</a>
           </li>
           <li class="nav-burger__item">
-            <a href="#" class="nav-burger__link">about as</a>
+            <a href="#about" class="nav-burger__link">about as</a>
           </li>
           <li class="nav-burger__item">
-            <a href="#" class="nav-burger__link">technology</a>
+            <a href="#technology" class="nav-burger__link">technology</a>
           </li>
           <li class="nav-burger__item">
-            <a href="#" class="nav-burger__link">features</a>
+            <a href="#feature" class="nav-burger__link">features</a>
           </li>
           <li class="nav-burger__item">
-            <a href="#" class="nav-burger__link">get in touch</a>
+            <a href="#feedback" class="nav-burger__link">get in touch</a>
           </li>
         </ul>
       </nav>
       <!--</editor-fold>-->
 
       <div class="header__icon-wrapper">
-        <img
-          class="header__logo"
-          src="images/logo.svg"
-          alt="crazybaby's logo">
+        <a href="#top">
+          <img
+            class="header__logo"
+            src="images/logo.svg"
+            alt="crazybaby's logo"
+          >
+        </a>
         <label class="header__menu-toggle" for="burger-toggle"></label>
         <button class="header__btn-buy">Buy</button>
       </div>
@@ -53,7 +56,8 @@
           <img
             class="header__img"
             src="images/product.png"
-            alt="product photo">
+            alt="product photo"
+          >
         </div>
         <div class="header__text-wrapper">
           <h1 class="header__title">
@@ -77,19 +81,19 @@
     <nav class="nav-pc page__nav">
       <ul class="nav-pc__list">
         <li class="nav-pc__item">
-          <a href="#" class="nav-pc__link">our story</a>
+          <a href="#story" class="nav-pc__link">our story</a>
         </li>
         <li class="nav-pc__item">
-          <a href="#" class="nav-pc__link">about us</a>
+          <a href="#about" class="nav-pc__link">about us</a>
         </li>
         <li class="nav-pc__item">
-          <a href="#" class="nav-pc__link">technology</a>
+          <a href="#technology" class="nav-pc__link">technology</a>
         </li>
         <li class="nav-pc__item">
-          <a href="#" class="nav-pc__link">features</a>
+          <a href="#feature" class="nav-pc__link">features</a>
         </li>
         <li class="nav-pc__item">
-          <a href="#" class="nav-pc__link">get in touch</a>
+          <a href="#feedback" class="nav-pc__link">get in touch</a>
         </li>
       </ul>
     </nav>
@@ -97,7 +101,7 @@
 
     <main class="main-block">
       <!--<editor-fold desc="Bullets">-->
-      <section class="bullet main-block__bullet">
+      <section class="bullet main-block__bullet" id="story">
         <div class="bullet__cards-wrapper">
           <input
             class="bullet__radio bullet__radio--1"
@@ -194,14 +198,15 @@
         <img
           class="video__img"
           src="images/video_intro.png"
-          alt="video's intro">
+          alt="video's intro"
+        >
         <div class="video__filter"></div>
         <div class="video__play"></div>
       </section>
       <!--</editor-fold>-->
 
       <!--<editor-fold desc="Future">-->
-      <section class="future main-block__future">
+      <section class="future main-block__future" id="about">
         <h2 class="future__title">
           DESIGNED FOR
           <br>
@@ -210,7 +215,8 @@
         <img
           class="future__img"
           src="images/future.png"
-          alt="design">
+          alt="design"
+        >
         <p class="future__text">
           In 2014, a group of geeky industrial designers, engineering veterans
           and acoustic experts formed crazybaby. This is a bunch of passionate
@@ -224,7 +230,7 @@
       <!--</editor-fold>-->
 
       <!--<editor-fold desc="Technology">-->
-      <section class="technology main-block__technology">
+      <section class="technology main-block__technology" id="technology">
         <h2 class="technology__title">technology</h2>
         <input
           class="technology__radio technology__radio--1"
@@ -310,7 +316,8 @@
             <img
               class="technology__img"
               src="images/product2.svg"
-              alt="disassembled product">
+              alt="disassembled product"
+            >
           </div>
         </div>
         <div class="technology__btn-wrapper">
@@ -353,9 +360,9 @@
       <!--</editor-fold>-->
 
       <!--<editor-fold desc="Feature">-->
-      <section class="feature main-block__feature">
+      <section class="feature main-block__feature" id="feature">
         <div class="feature__background"></div>
-        <h2 class="feature__title">technology</h2>
+        <h2 class="feature__title">features</h2>
         <div class="feature__cards-wrapper">
           <!--<editor-fold desc="checkbox">-->
           <input
@@ -462,14 +469,63 @@
           <img
             class="feature__img"
             src="images/product3.svg"
-            alt="product`s image">
+            alt="product`s image"
+          >
         </div>
       </section>
       <!--</editor-fold>-->
 
-
+      <!--<editor-fold desc="feedback">-->
+      <section class="feedback main-block__feedback" id="feedback">
+        <div class="feedback__title-wrapper">
+          <h2 class="feedback__title">DO YOU HAVE ANY QUESTIONS?</h2>
+        </div>
+        <form
+          class="feedback__form"
+          action="/"
+          method="get"
+        >
+          <div class="feedback__email">
+            <input
+              class="input-text"
+              name="email"
+              type="email"
+              placeholder="Your email"
+              required>
+          </div>
+          <div class="feedback__message">
+            <textarea
+              class="input-text"
+              name="message"
+              placeholder="Your message"
+              minlength="10"
+              required
+           ></textarea>
+          </div>
+          <button type="submit" class="feedback__btn">send</button>
+        </form>
+      </section>
+      <!--</editor-fold>-->
     </main>
 
+    <footer class="footer">
+      <a href="#top">
+        <img
+          class="footer__logo"
+          src="images/logo.svg"
+          alt="logo"
+        >
+      </a>
+      <a class="footer__arrow" href="#"></a>
+      <div class="footer__icon-wrapper">
+        <a class="footer__fb" href="https://cutt.ly/tve1Npz"></a>
+        <a class="footer__twitter" href="https://cutt.ly/6ve11WY"></a>
+        <a class="footer__inst" href="https://cutt.ly/1ve13UA"></a>
+      </div>
+      <a href="#" class="footer__privacy-policy">
+        © 2019 All rights reserved. Terms of Use & Privacy Policy
+      </a>
+    </footer>
 
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
