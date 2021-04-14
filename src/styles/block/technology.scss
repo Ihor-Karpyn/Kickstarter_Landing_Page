@@ -130,6 +130,10 @@
 
     cursor: help;
 
+    &:hover {
+      background-color: #131313;
+    }
+
     @each $i, $top, $left in $plusPosition {
       &--#{$i} {
         top: $top;
