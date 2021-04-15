@@ -1,9 +1,4 @@
 .header {
-  min-height: 100vh;
-
-  @media (min-width: $breakPointTablet) {
-    min-height: auto;
-  }
 
   &__icon-wrapper {
     @include container;
