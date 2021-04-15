@@ -6,11 +6,6 @@
     @include container;
 
     @media (min-width: $breakPointTablet) {
-      margin-top: 137px;
-      margin-bottom: 130px;
-    }
-
-    @media (min-width: $breakPointPc) {
       margin-top: 0;
       margin-bottom: 150px;
     }

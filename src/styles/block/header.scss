@@ -1,7 +1,7 @@
 .header {
   min-height: 100vh;
 
-  @media (min-width: $breakPointPc) {
+  @media (min-width: $breakPointTablet) {
     min-height: auto;
   }
 
@@ -29,7 +29,7 @@
 
     @include backgroundImage("../images/toggle_on.svg");
 
-    @media (min-width: $breakPointPc) {
+    @media (min-width: $breakPointTablet) {
       display: none;
     }
   }
@@ -63,7 +63,7 @@
     overflow: hidden;
     max-width: 650px;
 
-    @media (min-width: $breakPointPc) {
+    @media (min-width: $breakPointTablet) {
       max-width: none;
     }
   }
@@ -74,6 +74,10 @@
     @media (min-width: $breakPointBigTel) {
       width: 739px;
       margin-top: -60px;
+    }
+
+    @media (min-width: 1000px) {
+      width: 850px;
     }
 
     @media (min-width: $breakPointPc) {
@@ -107,6 +111,11 @@
       font-size: 48px;
       line-height: 62px;
       text-align: left;
+    }
+
+    @media (min-width: 1000px) {
+      font-size: 55px;
+      line-height: 68px;
     }
 
     @media (min-width: $breakPointPc) {
@@ -146,7 +155,7 @@
   &__btn-buy {
     display: none;
 
-    @media (min-width: $breakPointPc) {
+    @media (min-width: $breakPointTablet) {
       display: block;
       width: 102px;
       height: 48px;

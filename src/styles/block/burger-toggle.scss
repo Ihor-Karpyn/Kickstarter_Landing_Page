@@ -5,7 +5,7 @@
     transform: translateY(0);
     opacity: 1;
 
-    @media (min-width: $breakPointPc) {
+    @media (min-width: $breakPointTablet) {
       display: none;
     }
   }

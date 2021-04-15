@@ -1,7 +1,7 @@
 .nav-pc {
   display: none;
 
-  @media (min-width: $breakPointPc) {
+  @media (min-width: $breakPointTablet) {
     position: sticky;
     top: 0;
     z-index: 999;
