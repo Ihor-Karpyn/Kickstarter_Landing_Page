@@ -11,4 +11,4 @@
 
 ## Description
 landing page for real estate company
-- [DEMO LINK](https://ihor-karpyn.github.io/Kickstarter/)
+- [DEMO LINK](https://ihor-karpyn.github.io/Kickstarter_Landing_Page/)
