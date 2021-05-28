@@ -20,6 +20,8 @@
     width: 24px;
     height: 20px;
 
+    @include iconHoverEffect;
+
     @include backgroundImage("../images/arrow.svg");
   }
 
@@ -41,6 +43,8 @@
     width: 11px;
     height: 19px;
 
+    @include iconHoverEffect;
+
     @include backgroundImage("../images/fb.svg");
   }
 
@@ -49,6 +53,8 @@
     width: 22px;
     height: 17px;
 
+    @include iconHoverEffect;
+
     @include backgroundImage("../images/twitter.svg");
   }
 
@@ -56,6 +62,8 @@
     display: block;
     width: 18px;
     height: 18px;
+
+    @include iconHoverEffect;
 
     @include backgroundImage("../images/inst.svg");
   }
